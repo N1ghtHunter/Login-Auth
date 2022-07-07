@@ -50,23 +50,6 @@ app.use(function (req, res, next) {
 	next();
 });
 
-// const store = new MongoDBSession({
-// 	uri: uri,
-// 	collection: "mySessions",
-// });
-// app.use(
-// 	session({
-// 		secret: "thisismazinsecretkey",
-// 		resave: false,
-// 		saveUninitialized: false,
-// 		store: store,
-// 	})
-// );
-// app.get("/", (req, res) => {
-// 	req.session.isAuth = true;
-// 	res.send("Hello Session");
-// });
-
 //Routes
 app.use("/", require("./routes/index"));
 app.use("/users", require("./routes/users"));
